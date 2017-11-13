@@ -407,9 +407,9 @@ angular.module('ngAudio', [])
                     audioObject.src = audio.src;
 
 					//After we check if progress is bigger than 0, and we set
-                    var tempProgress = (audio.currentTime / audio.duration).toPrecision();
+                    var tempProgress =  parseFloat((audio.currentTime / audio.duration).toPrecision());
                     if(tempProgress  > 0 ){
-                      audioObject.progress = tempProgress;
+                        audioObject.progress = parseFloat(tempProgress);
                     }
 
                     if (audioObject.currentTime >= audioObject.duration) {
